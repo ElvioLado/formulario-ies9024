@@ -13,7 +13,6 @@ import models.ConectorBD;
 @WebServlet(name = "mostrarDatos", urlPatterns = {"/mostrarDatos"})
 public class mostrarDatos extends HttpServlet {
 
-   
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, ClassNotFoundException {
         response.setContentType("text/html;charset=UTF-8");
