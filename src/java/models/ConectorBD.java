@@ -23,12 +23,12 @@ public class ConectorBD {
         }
     }
 
-    public void insertar(String dato,String nombre) {
+    public void insertar(String apellido,String nombre) {
         Statement statement;
 
         try {
             String sentencia;
-            sentencia = "INSERT INTO `alumno`(`id`, `apellido`,`nombre`) VALUES (null,'"+dato+"','"+nombre+"')";
+            sentencia = "INSERT INTO `alumno`(`id`, `apellido`,`nombre`) VALUES (null,'"+apellido+"','"+nombre+"')";
             statement = this.conexion.createStatement();
             statement.executeUpdate(sentencia);
             System.out.println("Realizados");
