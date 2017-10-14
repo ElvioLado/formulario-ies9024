@@ -1,5 +1,4 @@
 package models;
-import static java.lang.System.out;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -16,7 +15,6 @@ public class ConectorBD {
             Class.forName("com.mysql.jdbc.Driver");
             conexion = (Connection) DriverManager.getConnection(URL_BASEDATOS, USUARIO, CONTRASEÑA);
         } catch (SQLException ex) {
-            ex.printStackTrace();
         }
     }
 
@@ -29,7 +27,6 @@ public class ConectorBD {
             statement.executeUpdate(sentencia);
             System.out.println("Realizados");
         } catch (SQLException ex) {
-            ex.printStackTrace();
         }
     }
     
