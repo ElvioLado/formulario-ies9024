@@ -16,6 +16,8 @@
     <title>Registro IES-9024 Online</title>
 </head>
 <body>
+        <link href='img/NYCS-bull-trans-F.svg.png' rel='shortcut icon' type='image/png'>
+
         <div class="form_top">
             <h2>IES 9-024 - <span>INSCRIPCIÒN </span>- SISTEMAS <span>PAGINA 1</span></h2>
             <img src="./img/LOGO_NUEVO.png" >
@@ -36,7 +38,7 @@
             </ul>
             <div class="secciones">
             <!--Inicio de la primera seccion--> 
-            <form action="../mostrarDatos" name="prueba" class="form_reg" method="POST" onsubmit="return validacion()">
+            <form action="mostrarDatos" name="prueba" class="form_reg" method="POST" onsubmit="return validacion()">
                 <article id="tab1">
                     <h2>¡Bienvenido!</h2>  
                     <br>
@@ -46,7 +48,13 @@
                     <h3>¿Como empiezo a llenar el formulario?</h3>
                     <br>
                     <p> 1)En este primer pas indicaremos como ir a la primera pagina</p>
-                    <a href="../../../../../AppData/Local/Temp/httplamosquitera.org20170914causa-tupac-amaru-aun-sigue-detenido-el-hijo-de-nelida-rojas.URL"></a>
+            <ul>
+                <ul class="tabs">
+                    
+                    <li><a href="#tab2"><span aria-hidden="true"><span class="tab-text">Primer Pagina</span></span></a></li>
+                    
+                </ul>
+            </ul>
                     
                 </article>
                 <article id="tab2">
@@ -60,16 +68,16 @@
                            <div class="checkbox">
                                <center><h4>DOCUMENTO DE IDENTIDAD(c.o):</h4></center>
                                <br>                
-                               <input type="checkbox" id="DNI"  name="tipo" value="DNI">
+                               <input type="radio" id="DNI"  name="tipo" value="DNI">
                                <label for="DNI">1-DNI</label>
 
-                               <input type="checkbox" id="DNI2" name="tipo" value="L.E/L.C">
+                               <input type="radio" id="DNI2" name="tipo" value="L.E/L.C">
                                <label for="DNI2">2-L.E/L.C</label>
 
-                               <input type="checkbox" id="DNI1" name="tipo" value="Cedula">
+                               <input type="radio" id="DNI1" name="tipo" value="Cedula">
                                <label for="DNI1">3-Cedula</label>
 
-                               <input type="checkbox" id="DNI3" name="tipo" value="Pasaporte">
+                               <input type="radio" id="DNI3" name="tipo" value="Pasaporte">
                                <label for="DNI3">4-Pasaporte</label>
                                <input class="input" type="number" name="dni" id="numdni" placeholder="Numero de Documento">
                            </div>
@@ -127,6 +135,13 @@
                                        <label for="no3">No</label>
                            </div>
                        </div>
+                        <ul>
+                        <ul class="tabs" style="background-color:azure">
+                    
+                            <li id="botonsiguiente"><a href="#tab3"><span aria-hidden="true"><span class="tab-text">Siguiente pagina</span></span></a></li>
+                    
+                        </ul>
+                        </ul>
                        </center>
                    </article>
                    <!--DATOS DE NACIMIENTO-->
@@ -255,7 +270,14 @@
                                 </div>
 
                             </div> 
-                            <br>
+                           
+                            <ul>
+                        <ul class="tabs" style="background-color:azure">
+                    
+                            <li id="botonsiguiente"><a href="#tab4"><span aria-hidden="true"><span class="tab-text">Siguiente pagina</span></span></a></li>
+                    
+                        </ul>
+                        </ul>
                     </article></center>
                     <!--Fin de la Segunda seccion-->
 
@@ -320,7 +342,14 @@
                                 <label for="madretrabaja3">No sabe</label>    
                                 <input class="input" type="text" name="madreocupacion" placeholder="Ocupacion" >
                         </div>
-                    </div>    
+                    </div>
+                    <ul>
+                        <ul class="tabs" style="background-color:azure">
+                    
+                            <li id="botonsiguiente"><a href="#tab5"><span aria-hidden="true"><span class="tab-text">Siguiente pagina</span></span></a></li>
+                    
+                        </ul>
+                        </ul>
                     </center>
                 </article>  
                 
@@ -338,12 +367,8 @@
                     <br>          
                 </article>  
              <ul>
-                <ul class="tabs">
-                    <li><a href="#tab1"><span aria-hidden="true"><span class="tab-text">Inicio</span></span></a></li>
-                    <li><a href="#tab2"><span aria-hidden="true"><span class="tab-text">Primer Pagina</span></span></a></li>
-                    <li><a href="#tab3"><span aria-hidden="true"><span class="tab-text" >Segunda Pagina </span></span></a></li>
-                    <li><a href="#tab4"><span aria-hidden="true"><span class="tab-text" >Tercera Pagina </span></span></a></li>
-                    <li><a href="#tab5" id="enviarform"><span aria-hidden="true"><span class="tab-text" >Enviar Formulario </span></span></a></li>
+                 <ul class="tabs" style="">
+                     <center><p style="color:white">Esta web fue creada con propositos educativos, todo los derechos reservados.</p></center>
                 </ul>
             </ul>
             </form>    
