@@ -10,17 +10,21 @@ $(document).ready(function(){
         var  activeTab = $(this).attr('href');
         $(activeTab).show();
         return false;
+        
     }); 
-    function validacion() {
-    apellido = document.getElementById("apellidos")  
-    nombre = document.getElementById("nombres");
-    numdni = document.getElementById("numdni");
-    provincia = document.getElementById("provincia");
-    departamento = document.getElementById("departamento");
-    nacionalidad = document.getElementById("nacionalidad");
-    nacimiento = document.getElementById("nacimiento");
-    sexo = document.getElementBynames("sexo").values();
-    if (apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)) {
+});
+
+function validacion() {
+    alert("Comprobando datos");
+    apellido = document.getElementById("apellidos").value;
+    nombre = document.getElementById("nombres").value;
+    numdni = document.getElementById("numdni").value;
+    provincia = document.getElementById("provincia").value;
+    departamento = document.getElementById("departamento").value;
+    nacionalidad = document.getElementById("nacionalidad").value;
+    nacimiento = document.getElementById("nacimiento").value;
+    
+    if(apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)) {
         // Si no se cumple la condicion...
         alert('El campo Apellido esta vacio');
         return false;
@@ -40,11 +44,17 @@ $(document).ready(function(){
         // Si no se cumple la condicion...
         alert('El campo Departamento esta vacio');
         return false;
-    }  
+    }else if ( nacionalidad== null || nacionalidad.length == 0 || /^\s+$/.test(nacionalidad)) {
+        // Si no se cumple la condicion...
+        alert('El campo Nacionalidad esta vacio');
+        return false;
+    }else if ( nacimiento== null || nacimiento.length == 0 || /^\s+$/.test(nacimiento)) {
+        // Si no se cumple la condicion...
+        alert('El campo Nacimiento esta vacio');
+        return false;
+    }    
  
     // Si el script ha llegado a este punto, todas las condiciones
     // se han cumplido, por lo que se devuelve el valor true
     return true;
 }
-    
-});
