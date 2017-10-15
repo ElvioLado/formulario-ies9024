@@ -12,8 +12,27 @@ $(document).ready(function(){
     $(activeTab).show();
     return false;
     });
-    });
+});
+
 function validacion() {
+
+    if(document.getElementsByName("tipo")[0].checked){
+        tipodoc =document.getElementsByName("tipo")[0].value;
+    }
+
+    if(document.getElementsByName("tipo")[1].checked){
+        tipodoc =document.getElementsByName("tipo")[1].value;
+    }
+
+    if(document.getElementsByName("tipo")[2].checked){
+        tipodoc =document.getElementsByName("tipo")[2].value;
+    }
+
+    if(document.getElementsByName("tipo")[3].checked){
+        tipodoc =document.getElementsByName("tipo")[3].value;
+    }
+
+
     apellido = document.getElementById("apellidos").value;
     nombre = document.getElementById("nombres").value;
 
