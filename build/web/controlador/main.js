@@ -1,29 +1,27 @@
 $(document).ready(function(){
-    
+
     $('ul.tabs li a:first').addClass('active');
     $('.secciones article').hide();
     $('.secciones article:first').show();
-    $('ul.tabs li a').click(function(){
-        $('ul.tabs li a').removeClass('active');
-        $(this).addClass('active');
-        $('.secciones article').hide();
-        var  activeTab = $(this).attr('href');
-        $(activeTab).show();
-        return false;
-        
-    }); 
-});
-
+    $('ul.tabs li a').click(
+    function(){
+    $('ul.tabs li a').removeClass('active');
+    $(this).addClass('active');
+    $('.secciones article').hide();
+    var  activeTab = $(this).attr('href');
+    $(activeTab).show();
+    return false;
+    });
+    });
 function validacion() {
-    alert("Comprobando datos");
     apellido = document.getElementById("apellidos").value;
     nombre = document.getElementById("nombres").value;
+
     numdni = document.getElementById("numdni").value;
     provincia = document.getElementById("provincia").value;
     departamento = document.getElementById("departamento").value;
     nacionalidad = document.getElementById("nacionalidad").value;
     nacimiento = document.getElementById("nacimiento").value;
-    
 
     if(apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)) {
         // Si no se cumple la condicion...
