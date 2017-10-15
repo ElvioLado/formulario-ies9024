@@ -36,7 +36,7 @@
             </ul>
             <div class="secciones">
             <!--Inicio de la primera seccion--> 
-            <form action="mostrarDatos" name="prueba" class="form_reg" method="POST" onsubmit="return validacion()">
+            <form action="../mostrarDatos" name="prueba" class="form_reg" method="POST" onsubmit="return validacion()">
                 <article id="tab1">
                     <h2>¡Bienvenido!</h2>  
                     <br>
@@ -92,7 +92,7 @@
                            <div class="checkbox">
                                <h1>Fecha de nacimiento(c.o)</h1>
                                <br>
-                               <input name="nacimiento" class="input" style="padding:0" type="date" id="nacimiento" >
+                               <input name="nacimiento" class="input"  type="date" id="nacimiento" >
 
                                <h4>Sexo:(c.o)</h4>  
                                <br>
@@ -127,7 +127,6 @@
                                        <label for="no3">No</label>
                            </div>
                        </div>
-                           
                        </center>
                    </article>
                    <!--DATOS DE NACIMIENTO-->
@@ -338,11 +337,13 @@
                     </center>
                     <br>          
                 </article>  
-                <ul>
-                <ul class="tabs1">
-                    <li>Esta pagina fue creada por alumnos del Ies 9-024</li>
-                    
-                    
+             <ul>
+                <ul class="tabs">
+                    <li><a href="#tab1"><span aria-hidden="true"><span class="tab-text">Inicio</span></span></a></li>
+                    <li><a href="#tab2"><span aria-hidden="true"><span class="tab-text">Primer Pagina</span></span></a></li>
+                    <li><a href="#tab3"><span aria-hidden="true"><span class="tab-text" >Segunda Pagina </span></span></a></li>
+                    <li><a href="#tab4"><span aria-hidden="true"><span class="tab-text" >Tercera Pagina </span></span></a></li>
+                    <li><a href="#tab5" id="enviarform"><span aria-hidden="true"><span class="tab-text" >Enviar Formulario </span></span></a></li>
                 </ul>
             </ul>
             </form>    
