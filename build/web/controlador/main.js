@@ -24,6 +24,7 @@ function validacion() {
     nacionalidad = document.getElementById("nacionalidad").value;
     nacimiento = document.getElementById("nacimiento").value;
     
+
     if(apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)) {
         // Si no se cumple la condicion...
         alert('El campo Apellido esta vacio');
