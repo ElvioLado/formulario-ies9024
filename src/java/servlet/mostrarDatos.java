@@ -32,11 +32,12 @@ public class mostrarDatos extends HttpServlet {
             out.println("<h2>IES 9-024 - <span>INSCRIPCIÒN </span>- SISTEMAS <span>Finalizado</span></h2>");
             out.println("<body>");
             out.println("<img src=\"./img/LOGO_NUEVO.png\" >");
-            out.println("<h2 style=\"color:brown\">REGISTRO EXITOSO</h2>");
+            
             for(int x=0;x<3;x++){
                 alumno[x] =  request.getParameter(array.nextElement());                
             }
-            out.println("<h1>"+alumno[0]+ " "+alumno[1]+"</h1>");
+            out.println("<h2 style=\"color:brown\">Registro exitoso "+alumno[1]+ " "+alumno[0]+"</h2>");
+            
             
             conector.insertar(alumno[0],alumno[1]);
             out.println("<img src='https://media.tenor.com/images/be2fb8bdbd649cf6d57844340167cbdb/tenor.gif'>");

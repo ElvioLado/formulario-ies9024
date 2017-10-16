@@ -33,13 +33,11 @@ function validacion() {
     }*/
     apellido = document.getElementById("apellidos").value;
     nombre = document.getElementById("nombres").value;
-    tipodoc = document.querySelector("input[name='tipo']:checked").value;
     numdni = document.getElementById("numdni").value;
     provincia = document.getElementById("provincia").value;
     departamento = document.getElementById("departamento").value;
     nacionalidad = document.getElementById("nacionalidad").value;
     nacimiento = document.getElementById("nacimiento").value;
-    
 
     if(apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)) {
         // Si no se cumple la condicion...
@@ -70,26 +68,10 @@ function validacion() {
         alert('El campo Nacimiento esta vacio');
         return false;
     }
- 
+    tipodoc = document.querySelector("input[name='tipo']:checked").value;
+    
     // Si el script ha llegado a este punto, todas las condiciones
     // se han cumplido, por lo que se devuelve el valor true
     return true;
-}
-
-
-
-function efecto(){
-    $('#fotocargando').hide();
-    $('#contenidoWeb').fadeIn(500);
-
-}
-
-function estaVacio(campo) {
-  var campo = document.getElementById(campo).value;
-  if(campo == null || campo.length == 0 || /^\s+$/.test(campo)) {
-     // Si no se cumple la condicion...
-     return true;
-  }else {
-     return false;
-  }
+    
 }

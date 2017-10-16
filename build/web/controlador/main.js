@@ -15,7 +15,7 @@ $(document).ready(function(){
 });
 
 function validacion() {
-
+    /*
     if(document.getElementsByName("tipo")[0].checked){
         tipodoc =document.getElementsByName("tipo")[0].value;
     }
@@ -30,12 +30,9 @@ function validacion() {
 
     if(document.getElementsByName("tipo")[3].checked){
         tipodoc =document.getElementsByName("tipo")[3].value;
-    }
-
-
+    }*/
     apellido = document.getElementById("apellidos").value;
     nombre = document.getElementById("nombres").value;
-
     numdni = document.getElementById("numdni").value;
     provincia = document.getElementById("provincia").value;
     departamento = document.getElementById("departamento").value;
@@ -70,9 +67,11 @@ function validacion() {
         // Si no se cumple la condicion...
         alert('El campo Nacimiento esta vacio');
         return false;
-    }    
- 
+    }
+    tipodoc = document.querySelector("input[name='tipo']:checked").value;
+    
     // Si el script ha llegado a este punto, todas las condiciones
     // se han cumplido, por lo que se devuelve el valor true
     return true;
+    
 }
