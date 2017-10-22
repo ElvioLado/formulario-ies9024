@@ -19,7 +19,7 @@ public class mostrarDatos extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             ConectorBD conector = new ConectorBD();
             Enumeration<String> array = request.getParameterNames();
-            String [] alumno = new String[4];
+            String [] alumno = new String[12];
             
             out.println("<!DOCTYPE html>");
             out.println("<html>");
@@ -33,13 +33,16 @@ public class mostrarDatos extends HttpServlet {
             out.println("<body>");
             out.println("<img src=\"./img/LOGO_NUEVO.png\" >");
             
-            for(int x=0;x<3;x++){
+            for(int x=0;x<12;x++){
                 alumno[x] =  request.getParameter(array.nextElement());                
             }
             out.println("<h2 style=\"color:brown\">Registro exitoso "+alumno[1]+ " "+alumno[0]+"</h2>");
-            
-            
-            conector.insertar(alumno[0],alumno[1]);
+            out.println("<h2 style=\"color:brown\">Dato n°8 "+alumno[8]+"</h2>");
+            out.println("<h2 style=\"color:brown\">Dato n°9"+alumno[9]+"</h2>");
+            out.println("<h2 style=\"color:brown\">Dato n°10 "+alumno[10]+"</h2>");
+
+            conector.insertar(alumno[0],alumno[1],alumno[2],alumno[3],alumno[4],alumno[5],alumno[6],alumno[7],alumno[8],alumno[9],alumno[10]);
+            out.println("<h2 style=\"color:brown\">Obrasocial: "+alumno[10]+"</h2>");
             out.println("<img src='https://media.tenor.com/images/be2fb8bdbd649cf6d57844340167cbdb/tenor.gif'>");
             
             out.println("</body>");
