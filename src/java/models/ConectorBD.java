@@ -21,11 +21,11 @@ public class ConectorBD {
         }
     }
 
-    public void insertar(String apellido,String nombre,String tipodoc, String dni, String provincia, String departamento, String extranjero, String nacionalidad, String nacimiento, String sexo, String obrasocial) {
+    public void insertar(String apellido,String nombre,String tipodoc, String dni, String provincia, String departamento, String extranjero, String nacionalidad, String nacimiento, String sexo, String obrasocial, String becado, String segurovida, String establecimiento, String jurisdiccion, String establecimientosecundario, String titulosecundario, String egresosecundario, String adeudaasignatura, String cuantasasignaturas, String juridisccionescuela, String estudios, String estudiosuper) {
         Statement statement;
         try {
             String sentencia;
-            sentencia = "INSERT INTO `Alumno` (`idAlumno`, `apellido`, `nombre`, `tipodoc`, `dni`, `provincia`, `departamento`, `extranjero`, `nacionalidad`, `nacimiento`, `sexo`, `obrasocial`, `becado`, `segurovida`, `establecimiento`, `egreso`, `jurisdiccion`, `establecimientosecundario`, `titulosecundario`, `egresosecundario`, `adeudaasignatura`, `cuantasasignaturas`, `juridisccionescuela`, `estudios`, `estudiosuper`) VALUES (NULL, '"+apellido+"', '"+nombre+"', '"+tipodoc+"', '"+dni+"', '"+provincia+"', '"+departamento+"', '"+extranjero+"', '"+nacionalidad+"', '"+nacimiento+"', '"+sexo+"', '"+obrasocial+"', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);";
+            sentencia = "INSERT INTO `Alumno` (`idAlumno`, `apellido`, `nombre`, `tipodoc`, `dni`, `provincia`, `departamento`, `extranjero`, `nacionalidad`, `nacimiento`, `sexo`, `obrasocial`, `becado`, `segurovida`, `establecimiento`, `egreso`, `jurisdiccion`, `establecimientosecundario`, `titulosecundario`, `egresosecundario`, `adeudaasignatura`, `cuantasasignaturas`, `juridisccionescuela`, `estudios`, `estudiosuper`) VALUES (NULL, '"+apellido+"', '"+nombre+"', '"+tipodoc+"', '"+dni+"', '"+provincia+"', '"+departamento+"', '"+extranjero+"', '"+nacionalidad+"', '"+nacimiento+"', '"+sexo+"', '"+obrasocial+"', '"+becado+"', '"+segurovida+"', '"+establecimiento+"', '"+jurisdiccion+"', '"+establecimientosecundario+"', '"+titulosecundario+"', '"+egresosecundario+"', '"+adeudaasignatura+"', '"+cuantasasignaturas+"', '"+juridisccionescuela+"', '"+estudios+"', '"+estudiosuper+"',NULL);";
   
             statement = this.conexion.createStatement();
             statement.executeUpdate(sentencia);
