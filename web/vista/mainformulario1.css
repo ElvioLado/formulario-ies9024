@@ -391,7 +391,6 @@
     
 }
 /*Media Para Notebook,etc.*/
-@media(min-width:1024px){
     
 /*Cuerpo del Formulario*/
     body{
@@ -583,4 +582,4 @@
         font-size: 15px;
     }
     
-}
+
