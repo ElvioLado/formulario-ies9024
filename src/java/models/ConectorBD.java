@@ -6,7 +6,7 @@ import java.sql.Statement;
 
 public class ConectorBD {
     Connection conexion;
-    final String URL_BASEDATOS = "jdbc:mysql://localhost:3306/inscriptosies";
+    final String URL_BASEDATOS = "jdbc:mysql://localhost/registroies";
     final String USUARIO = "root";
     final String CONTRASEÑA = "";
     Statement state;
@@ -15,6 +15,7 @@ public class ConectorBD {
             Class.forName("com.mysql.jdbc.Driver");
             conexion = (Connection) DriverManager.getConnection(URL_BASEDATOS, USUARIO, CONTRASEÑA);
         } catch (SQLException ex) {
+            System.out.println("Conexión fallada");
         }
     }
 
