@@ -76,7 +76,7 @@ function validacion() {
         return false;
     }
     
-    
+    carrera = document.querySelector("input[name='carre']:checked").value;
     tipodoc = document.querySelector("input[name='tipo']:checked").value;
     sexo = document.querySelector("input[name='sexo']:checked").value;
     obrasocial = document.querySelector("input[name='obra']:checked").value;
