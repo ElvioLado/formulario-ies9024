@@ -15,22 +15,15 @@ $(document).ready(function(){
 });
 
 function validacion() {
-    /*
-    if(document.getElementsByName("tipo")[0].checked){
-        tipodoc =document.getElementsByName("tipo")[0].value;
+    
+    carrera = $("input[name='carrera']:checked").val();
+    if(carrera == null){
+        alert("Por favor seleccione a la carrera que desea inscribirse!");
+        return false;
     }
-
-    if(document.getElementsByName("tipo")[1].checked){
-        tipodoc =document.getElementsByName("tipo")[1].value;
-    }
-
-    if(document.getElementsByName("tipo")[2].checked){
-        tipodoc =document.getElementsByName("tipo")[2].value;
-    }
-
-    if(document.getElementsByName("tipo")[3].checked){
-        tipodoc =document.getElementsByName("tipo")[3].value;
-    }*/
+    
+    
+    
     apellido = document.getElementById("apellidos").value;
     nombre = document.getElementById("nombres").value;
     numdni = document.getElementById("numdni").value;
@@ -43,6 +36,7 @@ function validacion() {
     establecimientosecundario = document.getElementById("establecimientosecundario").value;
     titulosecundario = document.getElementById("titulosecundario").value;
     egresosecundario = document.getElementById("egresosecundario").value;
+    tipodoc = $("input[name='tipo']:checked").val();
     
     
     
@@ -76,17 +70,17 @@ function validacion() {
         return false;
     }
     
-    carrera = document.querySelector("input[name='carre']:checked").value;
-    tipodoc = document.querySelector("input[name='tipo']:checked").value;
-    sexo = document.querySelector("input[name='sexo']:checked").value;
-    obrasocial = document.querySelector("input[name='obra']:checked").value;
-    becado = document.querySelector("input[name='becado']:checked").value;
-    seguro = document.querySelector("input[name='seguro']:checked").value;
-    jurisdiccion = document.querySelector("input[name='jurisdiccion']:checked").value;
-    padrevive = document.querySelector("input[name='padrevive']:checked").value;
-    padretrabaja = document.querySelector("input[name='padretrabaja']:checked").value;
-    madrevive  = document.querySelector("input[name='madre']:checked").value;
-    madretrabaja  = document.querySelector("input[name='madretrabaja']:checked").value;
+    
+    
+    sexo = $("input[name='sexo']:checked").val();
+    obrasocial = $("input[name='obra']:checked").val();
+    becado = $("input[name='becado']:checked").val();
+    seguro = $("input[name='seguro']:checked").val();
+    jurisdiccion = $("input[name='jurisdiccion']:checked").val();
+    padrevive = $("input[name='padrevive']:checked").val();
+    padretrabaja = $("input[name='padretrabaja']:checked").val();
+    madrevive  = $("input[name='madre']:checked").val();
+    madretrabaja  = $("input[name='madretrabaja']:checked").val();
     
     
     // Si el script ha llegado a este punto, todas las condiciones
