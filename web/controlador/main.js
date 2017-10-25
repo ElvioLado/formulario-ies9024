@@ -38,7 +38,14 @@ function validacion() {
     departamento = document.getElementById("departamento").value;
     nacionalidad = document.getElementById("nacionalidad").value;
     nacimiento = document.getElementById("nacimiento").value;
-
+    establecimiento = document.getElementById("establecimiento").value;
+    egreso = document.getElementById("egreso").value;
+    establecimientosecundario = document.getElementById("establecimientosecundario").value;
+    titulosecundario = document.getElementById("titulosecundario").value;
+    egresosecundario = document.getElementById("egresosecundario").value;
+    
+    
+    
     if(apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)) {
         // Si no se cumple la condicion...
         alert('El campo Apellido esta vacio');
@@ -68,7 +75,19 @@ function validacion() {
         alert('El campo Nacimiento esta vacio');
         return false;
     }
+    
+    
     tipodoc = document.querySelector("input[name='tipo']:checked").value;
+    sexo = document.querySelector("input[name='sexo']:checked").value;
+    obrasocial = document.querySelector("input[name='obra']:checked").value;
+    becado = document.querySelector("input[name='becado']:checked").value;
+    seguro = document.querySelector("input[name='seguro']:checked").value;
+    jurisdiccion = document.querySelector("input[name='jurisdiccion']:checked").value;
+    padrevive = document.querySelector("input[name='padrevive']:checked").value;
+    padretrabaja = document.querySelector("input[name='padretrabaja']:checked").value;
+    madrevive  = document.querySelector("input[name='madre']:checked").value;
+    madretrabaja  = document.querySelector("input[name='madretrabaja']:checked").value;
+    
     
     // Si el script ha llegado a este punto, todas las condiciones
     // se han cumplido, por lo que se devuelve el valor true
