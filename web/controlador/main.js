@@ -92,7 +92,23 @@ function validacion() {
         alert("(C.O) : Elija opcion de Seguro de Vida - Pagina 1 ");
         return false;
         
+    }else if(padrevive == null){
+        alert("(C.O) : Elija opcion de Padre Vive - Pagina 3 ");
+        return false;
+    }else if(padretrabaja == null){
+        alert("(C.O) : Elija opcion de Padre Trabaja - Pagina 3 ");
+        return false;
+    }else if(madrevive == null){
+        alert("(C.O) : Elija opcion de Madre Vive - Pagina 3 ");
+        return false;
+    }else if(madretrabaja == null){
+        alert("(C.O) : Elija opcion de Madre Trabaja - Pagina 3 ");
+        return false;
     }
+        
+        
+    
+        
         
     
     
