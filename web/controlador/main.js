@@ -17,12 +17,17 @@ $(document).ready(function(){
 function validacion() {
     
     carrera = $("input[name='carrera']:checked").val();
-    if(carrera == null){
-        alert("Por favor seleccione a la carrera que desea inscribirse!");
-        return false;
-    }
     
-    
+    sexo = $("input[name='sexo']:checked").val();
+    obrasocial = $("input[name='obra']:checked").val();
+    becado = $("input[name='becado']:checked").val();
+    seguro = $("input[name='seguro']:checked").val();
+    jurisdiccion = $("input[name='jurisdiccion']:checked").val();
+    padrevive = $("input[name='padrevive']:checked").val();
+    padretrabaja = $("input[name='padretrabaja']:checked").val();
+    madrevive  = $("input[name='madre']:checked").val();
+    madretrabaja  = $("input[name='madretrabaja']:checked").val();
+    tipodoc = $("input[name='tipo']:checked").val();
     
     apellido = document.getElementById("apellidos").value;
     nombre = document.getElementById("nombres").value;
@@ -36,51 +41,62 @@ function validacion() {
     establecimientosecundario = document.getElementById("establecimientosecundario").value;
     titulosecundario = document.getElementById("titulosecundario").value;
     egresosecundario = document.getElementById("egresosecundario").value;
-    tipodoc = $("input[name='tipo']:checked").val();
+   
     
     
-    
-    if(apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)) {
-        // Si no se cumple la condicion...
-        alert('El campo Apellido esta vacio');
+    if(carrera == null){
+        alert("Por favor seleccione a la carrera que desea inscribirse!  - Pagina Inicio");
+        return false;
+    }else if (apellido == null || apellido.length == 0 || /^\s+$/.test(apellido)){
+       // Si no se cumple la condicion...
+        alert('El campo Apellido esta vacio - Pagina 1');
         return false;
     }else if (nombre == null || nombre.length == 0 || /^\s+$/.test(nombre)) {
         // Si no se cumple la condicion...
-        alert('El campo Nombre esta vacio');
+        alert('El campo Nombre esta vacio - Pagina 1');
         return false;
+    }else if(tipodoc == null){
+        alert("(C.O) : Elija opcion de tipo de documento - Pagina 1");
+        return false;
+        
     }else if ( numdni== null || numdni.length == 0 || /^\s+$/.test(numdni)) {
         // Si no se cumple la condicion...
-        alert('[El campo Numero DNI esta vacio');
+        alert('[El campo Numero DNI esta vacio - Pagina 1');
         return false;
     }else if ( provincia== null || provincia.length == 0 || /^\s+$/.test(provincia)) {
         // Si no se cumple la condicion...
-        alert('El campo Provincia esta vacio');
+        alert('El campo Provincia esta vacio - Pagina 1');
         return false;
     }else if ( departamento== null || departamento.length == 0 || /^\s+$/.test(departamento)) {
         // Si no se cumple la condicion...
-        alert('El campo Departamento esta vacio');
+        alert('El campo Departamento esta vacio - Pagina 1');
         return false;
     }else if ( nacionalidad== null || nacionalidad.length == 0 || /^\s+$/.test(nacionalidad)) {
         // Si no se cumple la condicion...
-        alert('El campo Nacionalidad esta vacio');
+        alert('El campo Nacionalidad esta vacio - Pagina 1');
         return false;
     }else if ( nacimiento== null || nacimiento.length == 0 || /^\s+$/.test(nacimiento)) {
         // Si no se cumple la condicion...
-        alert('El campo Nacimiento esta vacio');
+        alert('El campo Nacimiento esta vacio - Pagina 1');
         return false;
+    }else if (sexo == null) {
+        alert("(C.O) : Elija opcion de Sexo - Pagina 1");
+        return false;
+    }else if(obrasocial == null){
+        alert("(C.O) : Elija opcion de Obra Social - Pagina 1");
+        return false;
+    }else if(becado == null){
+        alert("(C.O) : Elija opcion de Esta Becado - Pagina 1");
+        return false;
+    }else if(seguro == null){
+        alert("(C.O) : Elija opcion de Seguro de Vida - Pagina 1 ");
+        return false;
+        
     }
+        
     
     
     
-    sexo = $("input[name='sexo']:checked").val();
-    obrasocial = $("input[name='obra']:checked").val();
-    becado = $("input[name='becado']:checked").val();
-    seguro = $("input[name='seguro']:checked").val();
-    jurisdiccion = $("input[name='jurisdiccion']:checked").val();
-    padrevive = $("input[name='padrevive']:checked").val();
-    padretrabaja = $("input[name='padretrabaja']:checked").val();
-    madrevive  = $("input[name='madre']:checked").val();
-    madretrabaja  = $("input[name='madretrabaja']:checked").val();
     
     
     // Si el script ha llegado a este punto, todas las condiciones
